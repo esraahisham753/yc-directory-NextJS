@@ -96,7 +96,7 @@
         border-left: 10px solid transparent;
     }
 
-    /*.pink-container {
+    .pink-container {
         @apply w-full bg-primary min-h-[530px] flex justify-center items-center flex-col py-10 px-6;
         background-image: linear-gradient(
                 to right,
@@ -108,11 +108,8 @@
         background-size: 5% 100%;
         background-position: center;
         background-repeat: repeat-x;
-    }*/
-
-    .pink_container {
-        @apply w-full bg-primary min-h-[530px] pattern flex justify-center items-center flex-col py-10 px-6;
     }
+
 
     .tag {
         @apply bg-secondary px-6 py-3 font-work-sans font-bold rounded-sm uppercase relative;
@@ -339,7 +336,7 @@
     --card-foreground: oklch(0.129 0.042 264.695);
     --popover: oklch(1 0 0);
     --popover-foreground: oklch(0.129 0.042 264.695);
-    --primary: oklch(0.208 0.042 265.755);
+    --primary: #EE2B69;
     --primary-foreground: oklch(0.984 0.003 247.858);
     --secondary: oklch(0.968 0.007 247.896);
     --secondary-foreground: oklch(0.208 0.042 265.755);
