@@ -228,7 +228,7 @@
     }
 
     .startup-card_desc {
-        @apply font-normal text-base line-clamp-2 my-3 text-black break-all;
+        @apply font-normal text-base line-clamp-2 my-3 text-gray-600 break-all;
     }
 
     .startup-card_img {
