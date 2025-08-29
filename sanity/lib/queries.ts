@@ -1,6 +1,6 @@
 import { defineQuery } from "next-sanity";
 
-const STARTUP_QUERY = defineQuery(`
+export const STARTUP_QUERY = defineQuery(`
     *[_type == 'startup' && defined(slug.current)] {
         _createdAT,
         _id,

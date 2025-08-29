@@ -1,3 +1,4 @@
+import { formatDate } from "@/lib/utils";
 import { defineField, defineType } from "sanity";
 
 export const startup = defineType({
@@ -44,6 +45,16 @@ export const startup = defineType({
         defineField({
             name: 'pitch',
             type: 'markdown'
+        }),
+        defineField({
+            name: 'createdAt',
+            title: 'Created At',
+            type: 'date',
+            initialValue: () => new Date().toLocaleDateString('us-en', {
+                day: "numeric",
+                month: 'long',
+                year: 'numeric'
+            })
         })
     ]
 })
