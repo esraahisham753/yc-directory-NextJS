@@ -2,7 +2,7 @@ import { defineQuery } from "next-sanity";
 
 export const STARTUP_QUERY = defineQuery(`
     *[_type == 'startup' && defined(slug.current)] {
-        _createdAT,
+        createdAt,
         _id,
         author -> {
             _id, name
@@ -13,6 +13,10 @@ export const STARTUP_QUERY = defineQuery(`
         pitch,
         slug,
         title,
-        views
+        views,
+        _type,
+        _createdAt,
+        _updatedAt,
+        _rev
     }
 `);

@@ -1,4 +1,4 @@
-import StartupCard from "@/components/StartupCard";
+import StartupCard, { StartupTypeCard } from "@/components/StartupCard";
 import SearchForm from "../../components/SearchForm";
 import { client } from "@/sanity/lib/client";
 import { STARTUP_QUERY } from "@/sanity/lib/queries";
@@ -6,6 +6,8 @@ import { STARTUP_QUERY } from "@/sanity/lib/queries";
 export default async function Home({ searchParams }: {searchParams: Promise<{query?: string}>}) {
   const {query} = (await searchParams);
   const posts = await client.fetch(STARTUP_QUERY);
+  
+  // console.log(posts);
 
   return (
     <>
