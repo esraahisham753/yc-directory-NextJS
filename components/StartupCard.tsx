@@ -37,7 +37,7 @@ const StartupCard = ({ post } : { post: StartupTypeCard }) => {
         </Link>
         <div className="flex mt-6 justify-between">
           <Link href={`/?query=${category}`}>
-            <p className="text-20-medium">Robots</p>
+            <p className="text-20-medium">{category}</p>
           </Link>
           <Button className="startup-card_btn" asChild>
             <Link href={`/startup/${_id}`}>Details</Link>
