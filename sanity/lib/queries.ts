@@ -34,6 +34,7 @@ export const STARTUP_BY_ID_QUERY = defineQuery(`
   pitch,
   slug,
   title,
-  views
+  views,
+  createdAt
 }
 `);

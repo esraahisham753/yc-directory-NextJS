@@ -74,7 +74,22 @@
         @apply font-[400] text-[14px] text-white/80;
     }
 
-    .tag-tri {
+    .pink-container {
+        @apply w-full bg-primary min-h-[530px] flex justify-center items-center flex-col py-10 px-6;
+        background-image: linear-gradient(
+                to right,
+                transparent 49.5%,
+                rgba(251, 232, 67, 0.2) 49.5%,
+                rgba(251, 232, 67, 0.6) 50.5%,
+                transparent 50.5%
+        );
+        background-size: 5% 100%;
+        background-position: center;
+        background-repeat: repeat-x;
+    }
+
+
+    /*.tag-tri {
         position: relative;
     }
 
@@ -96,23 +111,43 @@
         border-left: 10px solid transparent;
     }
 
-    .pink-container {
-        @apply w-full bg-primary min-h-[530px] flex justify-center items-center flex-col py-10 px-6;
-        background-image: linear-gradient(
-                to right,
-                transparent 49.5%,
-                rgba(251, 232, 67, 0.2) 49.5%,
-                rgba(251, 232, 67, 0.6) 50.5%,
-                transparent 50.5%
-        );
-        background-size: 5% 100%;
-        background-position: center;
-        background-repeat: repeat-x;
+    .tag {
+        @apply bg-secondary px-6 py-3 font-work-sans font-bold rounded-sm uppercase relative tag-tri;
+    }*/
+
+    @property --tw-font-weight {
+        syntax: "*";
+        inherits: false;
     }
 
-
     .tag {
-        @apply bg-secondary px-6 py-3 font-work-sans font-bold rounded-sm uppercase relative;
+        background-color: var(--secondary);
+        padding-inline: calc(var(--spacing) * 6);
+        padding-block: calc(var(--spacing) * 3);
+        font-family: var(--font-family-work-sans);
+        --tw-font-weight: var(--font-weight-bold) /* 700 */;
+        font-weight: var(--font-weight-bold) /* 700 */;
+        border-radius: calc(var(--radius) /* 0.5rem = 8px */ - 4px);
+        text-transform: uppercase;
+        position: relative;
+    }
+
+    .tag::before {
+        content: '';
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        border-top: 10px solid black;
+        border-right: 10px solid transparent;
+    }
+
+    .tag::after {
+        content: '';
+        position: absolute;
+        bottom: 8px;
+        right: 8px;
+        border-bottom: 10px solid black;
+        border-left: 10px solid transparent;
     }
 
     .heading {
@@ -338,7 +373,7 @@
     --popover-foreground: oklch(0.129 0.042 264.695);
     --primary: #EE2B69;
     --primary-foreground: oklch(0.984 0.003 247.858);
-    --secondary: oklch(0.968 0.007 247.896);
+    --secondary: #FBE843;
     --secondary-foreground: oklch(0.208 0.042 265.755);
     --muted: oklch(0.968 0.007 247.896);
     --muted-foreground: oklch(0.554 0.046 257.417);
